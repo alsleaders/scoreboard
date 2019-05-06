@@ -1,5 +1,6 @@
 let countOfTimesClickedT1 = 0
 let countOfTimesClickedT2 = 0
+let numberOfQuarters = 1
 
 const main = () => {
   if (document.querySelector('h1.hello-world')) {
@@ -58,6 +59,13 @@ const updateTeamTwoName = () => {
   console.log(teamName2)
   document.querySelector('.updatedTeam2Name').textContent = teamName2
 }
+
+const updateQuarter = () => {
+  console.log('period just ended')
+  numberOfQuarters += 1
+  document.querySelector('.present-quarter').textContent = numberOfQuarters
+}
+
 document.addEventListener('DOMContentLoaded', main)
 document
   .querySelector('.team-1-add-1-button')
@@ -77,4 +85,6 @@ document
 document
   .querySelector('.update-team-2-name')
   .addEventListener('click', updateTeamTwoName)
-// document.querySelector(.text1).textContent = text1.value
+document
+  .querySelector('.quarter-tracker')
+  .addEventListener('click', updateQuarter)
