@@ -47,8 +47,18 @@ const subtractOneFromCountT2 = () => {
   updateCounterTeam2InHtml()
 }
 
+const updateTeamOneName = () => {
+  const teamName1 = document.querySelector('.team-1-new-name').value
+  console.log(teamName1)
+  document.querySelector('.updatedTeam1Name').textContent = teamName1
+}
+
+const updateTeamTwoName = () => {
+  const teamName2 = document.querySelector('.team-2-new-name').value
+  console.log(teamName2)
+  document.querySelector('.updatedTeam2Name').textContent = teamName2
+}
 document.addEventListener('DOMContentLoaded', main)
-// document.querySelector(.update-team-1-name).addEventListener('submit', replaceTeam1Name)
 document
   .querySelector('.team-1-add-1-button')
   .addEventListener('click', addOneToCountT1)
@@ -61,3 +71,10 @@ document
 document
   .querySelector('.team-2-subtract-1-button')
   .addEventListener('click', subtractOneFromCountT2)
+document
+  .querySelector('.update-team-1-name')
+  .addEventListener('click', updateTeamOneName)
+document
+  .querySelector('.update-team-2-name')
+  .addEventListener('click', updateTeamTwoName)
+// document.querySelector(.text1).textContent = text1.value

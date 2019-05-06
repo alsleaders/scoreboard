@@ -1,5 +1,5 @@
 :root {
-  font: 16px / 1 sans-serif;
+  font: 35x / 1 sans-serif;
   color: darkblue;
 }
 
@@ -9,8 +9,9 @@ html {
 }
 
 body {
-  margin: 2% 8%;
+  margin: 2% auto;
   background: lightgrey;
+  max-width: 1200px;
 }
 
 h1 {
