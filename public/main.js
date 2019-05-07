@@ -2,20 +2,14 @@ let countOfTimesClickedT1 = 0
 let countOfTimesClickedT2 = 0
 let numberOfQuarters = 1
 let periodTime = 1200
+let minutes = Math.floor(periodTime / 60)
+let seconds = periodTime % 60
 
 const main = () => {
   if (document.querySelector('h1.hello-world')) {
     document.querySelector('h1.hello-world').textContent = 'Hello, World!'
   }
 }
-// const updatedTeam1Name = () => {
-//   document.getSelection
-// }
-
-// const replaceTeam1Name = () => {
-//   console.log('team 1 name inserted')
-//   updatedTeam1Name()
-// }
 
 const updateCounterTeam1InHtml = () => {
   document.querySelector('.team1Score').textContent = countOfTimesClickedT1
@@ -25,9 +19,9 @@ const updateCounterTeam2InHtml = () => {
   document.querySelector('.team2Score').textContent = countOfTimesClickedT2
 }
 
-// const updateGameTime = () => {
-//    display
-// }
+const updateGameTime = () => {
+document.querySelector('.updatedClock').textContent = minutes + " " + seconds
+}
 
 const addOneToCountT1 = () => {
   console.log('button was clicked')
@@ -71,13 +65,15 @@ const updateQuarter = () => {
   document.querySelector('.present-quarter').textContent = numberOfQuarters
 }
 
+function oneSecond {
+  periodTime -= 1
+} 
+
 const startCountdown = () => {
   console.log('game started')
-  periodTime -= 1
-  let minutes = Math.floor(periodTime / 60)
-  let seconds = periodTime % 60
-  document.querySelector('.updatedClock').textContent = minutes + ':' + seconds
+  setInterval(oneSecond(), 1000)
 }
+// setInterval = minutes + ':' + seconds
 
 // updateGameTime()
 // const periodTime = setInterval(myTimer, 1200000)
