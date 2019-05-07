@@ -55,9 +55,22 @@ input {
 
 .quarter-tracker {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.clock-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown-clock > p {
+  color: mediumslateblue;
+  border: whitesmoke inset 0.5rem;
+  font-size 30px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {

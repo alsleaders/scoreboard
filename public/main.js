@@ -1,6 +1,7 @@
 let countOfTimesClickedT1 = 0
 let countOfTimesClickedT2 = 0
 let numberOfQuarters = 1
+let periodTime = 1200
 
 const main = () => {
   if (document.querySelector('h1.hello-world')) {
@@ -23,6 +24,10 @@ const updateCounterTeam1InHtml = () => {
 const updateCounterTeam2InHtml = () => {
   document.querySelector('.team2Score').textContent = countOfTimesClickedT2
 }
+
+// const updateGameTime = () => {
+//    display
+// }
 
 const addOneToCountT1 = () => {
   console.log('button was clicked')
@@ -66,6 +71,28 @@ const updateQuarter = () => {
   document.querySelector('.present-quarter').textContent = numberOfQuarters
 }
 
+const startCountdown = () => {
+  console.log('game started')
+  periodTime -= 1
+  let minutes = Math.floor(periodTime / 60)
+  let seconds = periodTime % 60
+  document.querySelector('.updatedClock').textContent = minutes + ':' + seconds
+}
+
+// updateGameTime()
+// const periodTime = setInterval(myTimer, 1200000)
+// // document.getElementById('.countdown-clock').innerHTML=
+
+// let myVar = setInterval(myTimer, 1000)
+// function myTimer() {
+//   var d = new Date()
+//   document.getElementById('.countdown-clock').innerHTML = d.toLocaleTimeString()
+// }
+
+// hey doc, start countdown when I hit button
+// count down one second
+// display the new time
+
 document.addEventListener('DOMContentLoaded', main)
 document
   .querySelector('.team-1-add-1-button')
@@ -88,3 +115,4 @@ document
 document
   .querySelector('.quarter-tracker')
   .addEventListener('click', updateQuarter)
+document.querySelector('.clock-start').addEventListener('click', startCountdown)
