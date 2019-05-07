@@ -56,22 +56,32 @@ input {
 .quarter-tracker {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
 }
 
-.clock-start {
+.quarter-tracker > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+/* .clock-start {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 .countdown-clock > p {
   color: mediumslateblue;
   border: whitesmoke inset 0.5rem;
-  font-size 30px;
-}
+  font-size 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+} */
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   body {
